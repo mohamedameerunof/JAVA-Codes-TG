@@ -1,0 +1,23 @@
+import java.util.*;
+public class average {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            int mark = sc.nextInt();
+            sum += mark;
+        }
+        int average = sum / 5;
+        if (average >= 90) {
+            System.out.println("A");
+        } else if (average >= 80) {
+            System.out.println("B");
+        } else if (average >= 70) {
+            System.out.println("C");
+        } else if (average >= 50) {
+            System.out.println("D");
+        } else {
+            System.out.println("F");
+        }
+    }
+}
