@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class MPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter size of the M pattern (minimum 3): ");
+        int size = scanner.nextInt();
+
+        if (size < 3) {
+            System.out.println("Size must be at least 3.");
+            return;
+        }
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (
+                    j == 0 ||                     
+                    j == size - 1 ||                 
+                    (i == j && j <= size / 2) ||  
+                    (i + j == size - 1 && j >= size / 2) 
+                ) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
