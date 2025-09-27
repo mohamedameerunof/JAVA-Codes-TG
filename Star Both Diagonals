@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class StarBothDiagonals {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter size of the grid: ");
+        int size = scanner.nextInt();
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if ((i == j && i >= 1 && i < size) || 
+                    (i + j == size && i >= 1 && i < size && j >= 1 && j < size)) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
